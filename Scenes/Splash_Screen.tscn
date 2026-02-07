@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://5gcemswqi1td"]
+
+[ext_resource type="Script" uid="uid://dx6jo7ebt35qj" path="res://Splash_control.gd" id="1_qwaqo"]
+[ext_resource type="Texture2D" uid="uid://b34hlia5asigu" path="res://Image Assets/Logo.png" id="2_f8s34"]
+
+[node name="Control" type="Control" unique_id=221619602]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+script = ExtResource("1_qwaqo")
+
+[node name="Splash Image" type="TextureRect" parent="." unique_id=1881219903]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -329.5
+offset_right = 329.5
+offset_bottom = 664.0
+grow_horizontal = 2
+mouse_filter = 0
+texture = ExtResource("2_f8s34")
+stretch_mode = 5
