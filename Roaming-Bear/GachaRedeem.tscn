@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bbcv7ufxpdyl5"]
+
+[ext_resource type="Texture2D" uid="uid://ci01gm4n8gp5i" path="res://Image Assets/GachaMachine.png" id="1_wojwj"]
+[ext_resource type="Script" uid="uid://crxx4npl2gsb4" path="res://menu_button.gd" id="2_y3cij"]
+
+[node name="Control" type="Control" unique_id=2072383355]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1465355471]
+layout_mode = 0
+offset_right = 723.0
+offset_bottom = 1277.0
+color = Color(0.2982431, 0.15111297, 0.053955913, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1850098925]
+layout_mode = 0
+offset_top = -92.0
+offset_right = 720.0
+offset_bottom = 1188.0
+texture = ExtResource("1_wojwj")
+
+[node name="MenuButton" type="MenuButton" parent="." unique_id=75940803]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 1040.0
+offset_right = 736.0
+offset_bottom = 1269.0
+script = ExtResource("2_y3cij")

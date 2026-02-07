@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://5gcemswqi1td"]
+
+[ext_resource type="Script" uid="uid://dx6jo7ebt35qj" path="res://Splash_control.gd" id="1_tyw83"]
+[ext_resource type="Texture2D" uid="uid://b0qm4dn6kmwwy" path="res://Image Assets/Splash Screen.png" id="2_cbsdv"]
+[ext_resource type="Texture2D" uid="uid://b34hlia5asigu" path="res://Image Assets/Logo.png" id="3_g34ii"]
+
+[node name="Control" type="Control" unique_id=221619602]
+layout_mode = 3
+anchor_left = 0.21200001
+anchor_right = 0.5
+anchor_bottom = 0.606
+offset_left = 207.35999
+offset_bottom = -775.68
+grow_horizontal = 2
+script = ExtResource("1_tyw83")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=980437933]
+layout_mode = 0
+offset_left = -329.5
+offset_right = -289.5
+offset_bottom = 40.0
+texture = ExtResource("2_cbsdv")
+
+[node name="Splash Image" type="TextureRect" parent="." unique_id=1881219903]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -293.0
+offset_right = 366.0
+offset_bottom = 664.0
+grow_horizontal = 2
+mouse_filter = 0
+texture = ExtResource("3_g34ii")
+stretch_mode = 5
