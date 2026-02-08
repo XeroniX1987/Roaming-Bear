@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="Roaming Bear"
+run/main_scene="uid://5gcemswqi1td"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/handheld/orientation=5
 
 [physics]
 
@@ -22,3 +29,4 @@ config/icon="res://icon.svg"
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
