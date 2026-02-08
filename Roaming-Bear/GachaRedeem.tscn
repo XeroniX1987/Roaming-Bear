@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bbcv7ufxpdyl5"]
 
 [ext_resource type="Texture2D" uid="uid://ci01gm4n8gp5i" path="res://Image Assets/GachaMachine.png" id="1_wojwj"]
+[ext_resource type="Script" uid="uid://dmi8do3n808po" path="res://gacha_redeem.gd" id="1_xx4hd"]
 [ext_resource type="Script" uid="uid://crxx4npl2gsb4" path="res://menu_button.gd" id="2_y3cij"]
 
 [node name="Control" type="Control" unique_id=2072383355]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xx4hd")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1465355471]
 layout_mode = 0
@@ -30,4 +32,10 @@ offset_left = -11.0
 offset_top = 1040.0
 offset_right = 736.0
 offset_bottom = 1269.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Redeem Tokens"
 script = ExtResource("2_y3cij")

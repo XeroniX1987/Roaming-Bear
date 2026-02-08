@@ -21,14 +21,3 @@ layout_mode = 0
 offset_right = 713.0
 offset_bottom = 1274.0
 color = Color(0.29803923, 0.15294118, 0.05490196, 1)
-
-[node name="Container" type="Container" parent="." unique_id=1843975597]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.99300003
-anchor_bottom = 0.99200004
-offset_right = 0.039978027
-offset_bottom = 0.23999023
-
-[node name="TextureRect" type="TextureRect" parent="Container" unique_id=779421512]
-layout_mode = 2

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bqumri5blk2tn" path="res://control.gd" id="1_myes8"]
 [ext_resource type="Texture2D" uid="uid://cqen3tpvibwgy" path="res://Image Assets/StepsCounter Mask.png" id="2_3nwn6"]
+[ext_resource type="Texture2D" uid="uid://ci01gm4n8gp5i" path="res://Image Assets/GachaMachine.png" id="2_xxfk1"]
 [ext_resource type="Script" uid="uid://cj66qyyge4tiq" path="res://Scenes/texture_rect.gd" id="3_xxfk1"]
 
 [node name="Control" type="Control" unique_id=1595390156]
@@ -15,20 +16,45 @@ size_flags_vertical = 4
 script = ExtResource("1_myes8")
 metadata/_edit_use_anchors_ = true
 
-[node name="Testbutton" type="Button" parent="." unique_id=1127919559]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-button_mask = 3
-
 [node name="CurrencyLabel" type="Label" parent="." unique_id=458344536]
+z_index = 17
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 54.0
+offset_top = 270.0
+offset_right = 723.0
+offset_bottom = 593.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = -5
+theme_override_font_sizes/font_size = 200
+text = "6000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=2090782573]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 675.0
+offset_right = 367.0
+offset_bottom = 1380.0
+texture_normal = ExtResource("2_xxfk1")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=494101330]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 722.0
+offset_bottom = 1277.0
 texture = ExtResource("2_3nwn6")
 script = ExtResource("3_xxfk1")
+
+[node name="Button" type="Button" parent="." unique_id=458800495]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 870.0
+offset_right = 688.0
+offset_bottom = 1175.0
+theme_override_font_sizes/font_size = 150
+text = ">"

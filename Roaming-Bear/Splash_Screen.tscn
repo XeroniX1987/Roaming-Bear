@@ -2,7 +2,145 @@
 
 [ext_resource type="Script" uid="uid://dx6jo7ebt35qj" path="res://Splash_control.gd" id="1_tyw83"]
 [ext_resource type="Texture2D" uid="uid://b0qm4dn6kmwwy" path="res://Image Assets/Splash Screen.png" id="2_cbsdv"]
+[ext_resource type="Script" uid="uid://bw57cyebrb1vu" path="res://canvas_layer.gd" id="2_g34ii"]
 [ext_resource type="Texture2D" uid="uid://b34hlia5asigu" path="res://Image Assets/Logo.png" id="3_g34ii"]
+[ext_resource type="Script" uid="uid://r27kmec6htrn" path="res://texture_rect.gd" id="4_g34ii"]
+
+[sub_resource type="Animation" id="Animation_tyw83"]
+resource_name = "Black Scene Transition"
+length = 1.0666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cbsdv"]
+resource_name = "Black Scene Transition (Out)"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g34ii"]
+resource_name = "Fade In"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.53),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_uvvyc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TextureRect:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1582, 1966)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TextureRect:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-208, -91)]
+}
+
+[sub_resource type="Animation" id="Animation_eexqw"]
+resource_name = "Zoom Out"
+length = 1.0666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TextureRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0009999999, 0.98, 1),
+"transitions": PackedFloat32Array(1, 0.27739242, 1, 2.2191386),
+"update": 0,
+"values": [Vector2(1582, 1966), Vector2(1582, 1966), Vector2(720, 1605), Vector2(720, 1605)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TextureRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.02, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-111, -91), Vector2(-54, -89), Vector2(-1, 3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qse12"]
+_data = {
+&"Black Scene Transition": SubResource("Animation_tyw83"),
+&"Black Scene Transition (Out)": SubResource("Animation_cbsdv"),
+&"Fade In": SubResource("Animation_g34ii"),
+&"RESET": SubResource("Animation_uvvyc"),
+&"Zoom Out": SubResource("Animation_eexqw")
+}
 
 [node name="Control" type="Control" unique_id=221619602]
 layout_mode = 3
@@ -14,15 +152,32 @@ offset_bottom = -775.68
 grow_horizontal = 2
 script = ExtResource("1_tyw83")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=980437933]
-layout_mode = 0
-offset_left = -329.5
-offset_right = -289.5
-offset_bottom = 40.0
-texture = ExtResource("2_cbsdv")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1659181278]
+script = ExtResource("2_g34ii")
 
-[node name="Splash Image" type="TextureRect" parent="." unique_id=1881219903]
-layout_mode = 1
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=614873884]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+offset_left = -30.0
+offset_right = 746.0
+offset_bottom = 1323.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=96795898]
+root_node = NodePath("../Splash Image")
+libraries/ = SubResource("AnimationLibrary_qse12")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=980437933]
+offset_left = -208.0
+offset_top = -91.0
+offset_right = 1374.0
+offset_bottom = 1875.0
+texture = ExtResource("2_cbsdv")
+stretch_mode = 4
+script = ExtResource("4_g34ii")
+
+[node name="Splash Image" type="TextureRect" parent="CanvasLayer" unique_id=1881219903]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

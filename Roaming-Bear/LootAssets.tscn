@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://be4mdhdvs1lgq"]
+
+[ext_resource type="Script" uid="uid://6jcf7061hxpt" path="res://loot_assets.gd" id="1_ak7tc"]
+
+[node name="Control" type="Control" unique_id=640131706]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ak7tc")
